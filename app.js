@@ -34,9 +34,13 @@ function onSuccess(position){
     .then(res => res.json()) .then(result=>{
        let all_details=result.results[0].components;
        let {state,city,county,suburb,postcode}=all_details;
-       console.log(result);
+       //console.log(result);
+       button.style.fontSize="20px";
+       button.style.padding="10px";
 
-       button.innerText=`${state} ,${city}, ${county},${postcode}`;
+
+
+       button.innerText=`${state}, ${city}, ${county}, ${postcode}`;
     })
     
 
